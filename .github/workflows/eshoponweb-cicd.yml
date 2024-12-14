@@ -5,11 +5,11 @@ on: [push, workflow_dispatch]
 
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
-  RESOURCE-GROUP: rg-eshoponweb-NAME
-  LOCATION: japaneast
+  RESOURCE-GROUP: practicergjw
+  LOCATION: japanwest
   TEMPLATE-FILE: infra/webapp.bicep
-  SUBSCRIPTION-ID: b6aea20c-6473-4964-9658-317bf2b89ddd
-  WEBAPP-NAME: rjsfarmhousedevops
+  SUBSCRIPTION-ID: 0feeebbe-8432-48ec-9dcf-050c13e85750
+  WEBAPP-NAME: rjsgithubactionswap
 
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'
+        dotnet-version: '9.0.x'
         dotnet-quality: 'preview'
     #Build/Test/Publish the .net project
     - name: Build with dotnet
